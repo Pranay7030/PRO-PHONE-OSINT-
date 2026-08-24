@@ -1,3 +1,4 @@
+![Banner](banner.png)
 ![Bhandara Cyber Squad](https://capsule-render.vercel.app/api?type=waving&color=0:FF0000,100:000000&height=200&section=header&text=PRO%20PHONE%20OSINT&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Bhandara%20Cyber%20Squad%20💀&descAlignY=75)
 
 <p align="center">
