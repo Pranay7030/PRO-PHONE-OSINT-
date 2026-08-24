@@ -36,9 +36,8 @@ pip3 install -r requirements.txt
 python3
 
 # DISCLAIMER - READ CAREFULLY ⚠️
-
-<h1> FOR EDUCATIONAL PURPOSE ONLY </h1>
-<h3> This tool is created for ETHICAL HACKING & LEARNING.</h3>
+ FOR EDUCATIONAL PURPOSE ONLY </h1>
+ This tool is created for ETHICAL HACKING & LEARNING.</h3>
 
 *❌ DO NOT USE FOR ILLEGAL ACTIVITY ❌*<br>
 Creator is NOT responsible for any misuse.<br>
