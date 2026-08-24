@@ -1,3 +1,10 @@
+![Bhandara Cyber Squad](https://capsule-render.vercel.app/api?type=waving&color=0:FF0000,100:000000&height=200&section=header&text=PRO%20PHONE%20OSINT&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Bhandara%20Cyber%20Squad%20💀&descAlignY=75)
+
+<p align="center">
+<img src="https://img.shields.io/badge/Made%20By-Bhandara%20Cyber%20Squad-red?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/Ethical%20Hacking-Only-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python">
+</p>
 # PRO PHONE OSINT - Bhandara Cyber Squad 💀
 
 ### By Pranay aka Pranav Leak Hunter
