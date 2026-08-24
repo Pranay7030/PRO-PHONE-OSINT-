@@ -1,0 +1,53 @@
+# phone_osint.py | Bhandara Cyber Squad
+# Author: Pranay aka Pranav Leak Hunter
+# Legal OSINT Module - No Private Data Leak
+
+import phonenumbers
+from phonenumbers import carrier, geocoder, timezone
+import webbrowser
+
+# Colors
+R = "\033[91m"
+G = "\033[92m"
+Y = "\033[93m"
+C = "\033[96m"
+W = "\033[97m"
+
+def phone_osint():
+    print(f"{C}╔════════════════════════════════════╗")
+    print(f"║ 📱 PHONE OSINT - PRO MODULE ║")
+    print(f"╚════════════════════════════════════╝{W}\n")
+
+    num_input = input(f"{Y}[?] Number daal (+91 ke saath): {W}").strip()
+
+    if not num_input.startswith("+"):
+        num_input = "+91" + num_input
+
+    try:
+        phone = phonenumbers.parse(num_input, None)
+
+        print(f"\n{G}[✓] ANALYSIS COMPLETE:{W}")
+        print(f"{C}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{W}")
+        print(f"{W}📞 Number : {G}{num_input}{W}")
+        print(f"✅ Valid : {G}{phonenumbers.is_valid_number(phone)}{W}")
+        print(f"📶 Operator : {Y}{carrier.name_for_number(phone, 'en') or 'Unknown'}{W}")
+        print(f"📍 Circle : {Y}{geocoder.description_for_number(phone, 'en') or 'India'}{W}")
+        print(f"🌍 Timezone : {Y}{', '.join(timezone.time_zones_for_number(phone))}{W}")
+        print(f"📱 Type : {Y}{'Mobile' if phonenumbers.number_type(phone) == 1 else 'Other'}{W}")
+        print(f"{C}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{W}")
+
+        # Public OSINT Links - Legal Method
+        print(f"\n{R}[!] PUBLIC OSINT LINKS (Manual Check):{W}")
+        print(f"{W}1. Truecaller : https://www.truecaller.com/search/in/{num_input}")
+        print(f"2. Eyecon : https://eyecon-app.com/{num_input}")
+        print(f"3. WhosCall : https://whoscall.com/en-IN/{num_input}")
+        print(f"4. Truepeoplesearch (if US): https://www.truepeoplesearch.com/results?phoneno={num_input}")
+
+        print(f"\n{Y}Note: Link ko browser me khol, naam public data se dikhega.{W}")
+        print(f"{G}Bhandara Cyber Squad - Ethical Use Only 💀{W}\n")
+
+    except Exception as e:
+        print(f"{R}[X] Galat Number! Sahi format me daal (+919876543210){W}")
+
+if __name__ == "__main__":
+    phone_osint()
