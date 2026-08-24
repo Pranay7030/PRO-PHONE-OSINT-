@@ -20,24 +20,22 @@ Advanced Phone OSINT Tool for Ethical Hackers.
 - 🔍 Public OSINT Links (Truecaller, Eyecon, WhosCall)
 
 ### Install:
-Termux installation 
+# Termux installation 
 pkg update && pkg upgrade -y
 pkg install python git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
 python PRO-PHONE-OSINT.py
-# ya python main.py 
 
-
-For Linux installation 
+# Linux Installation 
 sudo apt update && sudo apt install python3 git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip3 install -r requirements.txt
 python3
 
- DISCLAIMER - READ CAREFULLY ⚠️
+# DISCLAIMER - READ CAREFULLY ⚠️
 
 <h1> FOR EDUCATIONAL PURPOSE ONLY </h1>
 <h3> This tool is created for ETHICAL HACKING & LEARNING.</h3>
@@ -51,13 +49,13 @@ Creator is NOT responsible for any misuse.<br>
 ---
 <div align="center">
 
-🌟 SUPPORT THE PROJECT 🌟
+🌟# SUPPORT THE PROJECT 🌟
 
 <h1> ⭐ PLEASE GIVE A STAR ⭐ </h1>
 <h2> Bhandara Cyber Squad Ko Support Karo! </h2>
 <h3> Bhandara Se Nagpur Tak Full Power! 💀🔥 </h3>
 
-*GitHub: @Pranay7030*
+# *GitHub: @Pranay7030*
 
 </div>
 
