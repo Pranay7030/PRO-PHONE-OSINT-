@@ -1,5 +1,4 @@
-
-Banner](banner.png)
+[Banner](banner.png)
 ![Bhandara Cyber Squad](https://capsule-render.vercel.app/api?type=waving&color=0:FF0000,100:000000&height=200&section=header&text=PRO%20PHONE%20OSINT&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Bhandara%20Cyber%20Squad%20💀&descAlignY=75)
 
 <p align="center">
@@ -28,9 +27,10 @@ git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
 python PRO-PHONE-OSINT.py
-# ya python main.py (jo file hai tere repo me)
+# ya python main.py 
 
-For Linux 
+
+For Linux installation 
 sudo apt update && sudo apt install python3 git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
