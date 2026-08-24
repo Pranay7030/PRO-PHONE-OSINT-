@@ -1,4 +1,5 @@
-![Banner](banner.png)
+
+Banner](banner.png)
 ![Bhandara Cyber Squad](https://capsule-render.vercel.app/api?type=waving&color=0:FF0000,100:000000&height=200&section=header&text=PRO%20PHONE%20OSINT&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Bhandara%20Cyber%20Squad%20💀&descAlignY=75)
 
 <p align="center">
@@ -34,4 +35,31 @@ sudo apt update && sudo apt install python3 git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip3 install -r requirements.txt
-python3 PRO-PHONE-OSINT.py
+python3
+
+ DISCLAIMER - READ CAREFULLY ⚠️
+
+<h1> FOR EDUCATIONAL PURPOSE ONLY </h1>
+<h3> This tool is created for ETHICAL HACKING & LEARNING.</h3>
+
+*❌ DO NOT USE FOR ILLEGAL ACTIVITY ❌*<br>
+Creator is NOT responsible for any misuse.<br>
+<b>Use at your own risk.</b>
+
+</div>
+
+---
+<div align="center">
+
+🌟 SUPPORT THE PROJECT 🌟
+
+<h1> ⭐ PLEASE GIVE A STAR ⭐ </h1>
+<h2> Bhandara Cyber Squad Ko Support Karo! </h2>
+<h3> Bhandara Se Nagpur Tak Full Power! 💀🔥 </h3>
+
+*GitHub: @Pranay7030*
+
+</div>
+
+---
+<p align="center"> Made with ❤️ by Pranay </p>
