@@ -1,3 +1,4 @@
+![GHOST](logo.png)
 ![PRO PHONE OSINT](banner.png)
 
 # 🔍 PRO PHONE OSINT
