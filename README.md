@@ -57,6 +57,8 @@ Creator is NOT responsible for any misuse.<br>
 # *GitHub: @Pranay7030*
 
 </div>
-
+<p align="center">
+<a href="https://github.com/Pranay7030/PRO-PHONE-OSINT-"><img src="https://img.shields.io/github/stars/Pranay7030/PRO-PHONE-OSINT-?style=social"></a>
+</p>
 ---
 <p align="center"> Made with ❤️ by Pranay </p>
