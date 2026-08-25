@@ -2,41 +2,65 @@ import phonenumbers
 from phonenumbers import geocoder, carrier, timezone
 import socket, re, webbrowser
 
-# COLOUR CODES
 R = "\033[91m"
 G = "\033[92m"
 Y = "\033[93m"
 C = "\033[96m"
 W = "\033[97m"
 
-print(R + """
-╔══════════════════════════════════════╗
-║ 👻 PRANAY GHOST OSINT V5.0 ULTRA ║
-║ Bhandara Cyber Squad 💀 ║
-╚══════════════════════════════════════╝
-""" + W)
+print(R + "======================================")
+print(" PRANAY GHOST OSINT V5.0 ULTRA")
+print(" Bhandara Cyber Squad")
+print("======================================" + W)
 print(G + " [ 4-in-1 Tool: Phone | Email | IP | Insta ]" + W)
 
 def phone_osint():
-    num = input(Y + "\n📱 Phone Number (+91 ke saath): " + W)
+    num = input(Y + "\n Phone Number (+91): " + W)
     try:
         p = phonenumbers.parse(num)
-        print(G + "✅ Valid:" + W, phonenumbers.is_valid_number(p))
-        print("📶 Operator:", carrier.name_for_number(p, 'en'))
-        print("📍 Location:", geocoder.description_for_number(p, 'en'))
-        print("⏰ Timezone:", timezone.time_zones_for_number(p))
-        print(C + "🔎 Link: truecaller.com/search/in/" + num + W)
+        print(G + " Valid: " + str(phonenumbers.is_valid_number(p)) + W)
+        print(G + " Operator: " + carrier.name_for_number(p, 'en') + W)
+        print(G + " Location: " + geocoder.description_for_number(p, 'en') + W)
+        print(G + " Timezone: " + str(timezone.time_zones_for_number(p)) + W)
+        print(C + " Link: truecaller.com/search/in/" + num + W)
     except:
-        print(R + "❌ Galat Number!" + W)
+        print(R + " Galat Number!" + W)
 
 def email_osint():
-    email = input(Y + "\n📧 Email daal: " + W)
+    email = input(Y + "\n Email daal: " + W)
     if re.match(r"[^@]+@[^@]+\.[^@]+", email):
-        print(G + "✅ Valid:" + W, email)
-        print("🌐 Domain:", email.split('@')[1])
-        print(C + "🔎 Leak: haveibeenpwned.com" + W)
+        print(G + " Valid: " + email + W)
+        print(G + " Domain: " + email.split('@')[1] + W)
+        print(C + " Leak: haveibeenpwned.com" + W)
     else:
-        print(R + "❌ Invalid Email" + W)
+        print(R + " Invalid Email" + W)
 
 def ip_osint():
-    ip = input(Y + "\n🌐 IP daal
+    ip = input(Y + "\n IP daal: " + W)
+    try:
+        host = socket.gethostbyaddr(ip)[0]
+        print(G + " IP: " + ip + W)
+        print(G + " Host: " + host + W)
+        print(C + " ipinfo.io/" + ip + W)
+    except:
+        print(R + " Invalid IP" + W)
+
+def insta_osint():
+    user = input(Y + "\n Insta Username: " + W)
+    user = user.replace("@", "").strip()
+    print(G + " Username: " + user + W)
+    print(C + " Profile: https://instagram.com/" + user + W)
+    print(C + " Google: https://www.google.com/search?q=site:instagram.com+" + user + W)
+    q = input(Y + " Browser me kholu? y/n: " + W)
+    if q.lower() == 'y':
+        webbrowser.open("https://instagram.com/" + user)
+
+while True:
+    print(Y + "\n[1] Phone [2] Email [3] IP [4] Insta [5] Exit" + W)
+    c = input("Option: ")
+    if c == '1': phone_osint()
+    elif c == '2': email_osint()
+    elif c == '3': ip_osint()
+    elif c == '4': insta_osint()
+    elif c == '5': break
+    else: print("Sahi option daal!")
