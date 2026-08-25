@@ -1,26 +1,24 @@
-![Banner](banner.png)
-![Bhandara Cyber Squad](https://capsule-render.vercel.app/api?type=waving&color=0:FF0000,100:000000&height=200&section=header&text=PRO%20PHONE%20OSINT&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Bhandara%20Cyber%20Squad%20💀&descAlignY=75)
+![PRO PHONE OSINT](banner.png)
+
+# 🔍 PRO PHONE OSINT
+### Bhandara Cyber Squad 💀 - Made by Pranay
 
 <p align="center">
-<img src="https://img.shields.io/badge/Made%20By-Bhandara%20Cyber%20Squad-red?style=for-the-badge&logo=python">
-<img src="https://img.shields.io/badge/Ethical%20Hacking-Only-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/MADE%20BY-BHANDARA%20CYBER%20SQUAD-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/TEAM-PRANAY%20LEAK%20HUNTER-blueviolet?style=for-the-badge">
+  <img src="https://img.shields.io/badge/ETHICAL%20HACKING-ONLY-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/PYTHON-3.8%2B-blue?style=for-the-badge">
 </p>
-# PRO PHONE OSINT - Bhandara Cyber Squad 💀
 
-### By Pranay aka Pranav Leak Hunter
-
-Advanced Phone OSINT Tool for Ethical Hackers.
-
-### Features:
+### ✨ Features
 - ✅ Valid / Invalid Check
-- 📶 Operator (Jio, Airtel, Vi)
+- 📶 Operator (Jio, Airtel, Vi, BSNL)
 - 📍 Circle / State Location
-- 🕒 Timezone
-- 🔍 Public OSINT Links (Truecaller, Eyecon, WhosCall)
+- ⏰ Timezone
+- 🔍 Public OSINT Links
 
-### Install:
-# Termux installation 
+### 📥 TERMUX INSTALLATION
+
 pkg update && pkg upgrade -y
 pkg install python git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
@@ -28,37 +26,54 @@ cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
 python PRO-PHONE-OSINT.py
 
-# Linux Installation 
-sudo apt update && sudo apt install python3 git -y
+### Linux installation 
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3 python3-pip git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip3 install -r requirements.txt
-python3
+python3 PRO-PHONE-OSINT.py
 
-# DISCLAIMER - READ CAREFULLY ⚠️
- FOR EDUCATIONAL PURPOSE ONLY </h1>
- This tool is created for ETHICAL HACKING & LEARNING.</h3>
-
-*❌ DO NOT USE FOR ILLEGAL ACTIVITY ❌*<br>
-Creator is NOT responsible for any misuse.<br>
-<b>Use at your own risk.</b>
-
-</div>
-
----
 <div align="center">
 
-🌟# SUPPORT THE PROJECT 🌟
+# 🚨🚨🚨 DISCLAIMER - DHYAN SE PADHO 🚨🚨🚨
+## ⚠️ FOR EDUCATIONAL PURPOSE ONLY ⚠️
+### 🔴 YE TOOL SIRF SIKHNE KE LIYE HAI 🔴
 
-<h1> ⭐ PLEASE GIVE A STAR ⭐ </h1>
-<h2> Bhandara Cyber Squad Ko Support Karo! </h2>
-<h3> Bhandara Se Nagpur Tak Full Power! 💀🔥 </h3>
+## ❌ ILLEGAL KAAM KE LIYE USE MAT KARNA ❌
+## ❌ KISI KO PARESHAN KARNE KE LIYE USE MAT KARNA ❌
 
-# *GitHub: @Pranay7030*
+### 👉 Galat istemal karoge toh jimmedari tumhari hogi
+### 👉 Creator Pranay jimmedar NAHI hai
+### 👉 Jail bhi ho sakti hai
+
+# ✅ ETHICAL USE ONLY - APNI RISK PAR USE KARO ✅
+### Jai Maharashtra | Bhandara Cyber Squad
 
 </div>
-<p align="center">
-<a href="https://github.com/Pranay7030/PRO-PHONE-OSINT-"><img src="https://img.shields.io/github/stars/Pranay7030/PRO-PHONE-OSINT-?style=social"></a>
-</p>
+
 ---
-<p align="center"> Made with ❤️ by Pranay </p>
+
+<div align="center">
+
+# 🌟🌟🌟 SUPPORT THE PROJECT 🌟🌟🌟
+## ⭐⭐⭐ PLEASE GIVE A STAR - STAR ZAROOR DENA ⭐⭐⭐
+### 🙏 1 STAR = BHANDARA CYBER SQUAD KO FULL SUPPORT 🙏
+
+## 🔥 BHANDARA SE NAGPUR TAK FULL POWER 🔥
+
+### 👇 NICHE PEELA BUTTON DABA KE STAR DO 👇
+
+<a href="https://github.com/Pranay7030/PRO-PHONE-OSINT-"><img src="https://img.shields.io/github/stars/Pranay7030/PRO-PHONE-OSINT-?style=for-the-badge&color=yellow&label=⭐%20STAR%20KARO%20BHAI%20⭐&labelColor=black"></a>
+
+<br><br>
+
+### 📢 DOSTO KO BHI SHARE KARO
+
+## GitHub: @Pranay7030 | Made with 💀 by Pranay
+
+</div>
+
+---
+<p align="center">Made with ❤️ by Pranay | Bhandara Cyber Squad 💀</p>
