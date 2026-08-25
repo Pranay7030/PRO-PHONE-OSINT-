@@ -18,62 +18,44 @@
 - 🔍 Public OSINT Links
 
 ### 📥 TERMUX INSTALLATION
-
+~~~bash
 pkg update && pkg upgrade -y
 pkg install python git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
 python PRO-PHONE-OSINT.py
+~~~
 
-### Linux installation 
-
+### 🐧 Linux Installation
+~~~bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install python3 python3-pip git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip3 install -r requirements.txt
 python3 PRO-PHONE-OSINT.py
-
+~~~
 <div align="center">
 
 # 🚨🚨🚨 DISCLAIMER - DHYAN SE PADHO 🚨🚨🚨
 ## ⚠️ FOR EDUCATIONAL PURPOSE ONLY ⚠️
 ### 🔴 YE TOOL SIRF SIKHNE KE LIYE HAI 🔴
-
 ## ❌ ILLEGAL KAAM KE LIYE USE MAT KARNA ❌
-## ❌ KISI KO PARESHAN KARNE KE LIYE USE MAT KARNA ❌
-
-### 👉 Galat istemal karoge toh jimmedari tumhari hogi
-### 👉 Creator Pranay jimmedar NAHI hai
-### 👉 Jail bhi ho sakti hai
-
-# ✅ ETHICAL USE ONLY - APNI RISK PAR USE KARO ✅
-### Jai Maharashtra | Bhandara Cyber Squad
+### 👉 Galat use ki zimmedari tumhari hogi
 
 </div>
-
----
 
 <div align="center">
 
-# 🌟🌟🌟 SUPPORT THE PROJECT 🌟🌟🌟
-## ⭐⭐⭐ PLEASE GIVE A STAR - STAR ZAROOR DENA ⭐⭐⭐
-### 🙏 1 STAR = BHANDARA CYBER SQUAD KO FULL SUPPORT 🙏
+# 🌟 SUPPORT THE PROJECT 🌟
+## ⭐ STAR ZAROOR DENA ⭐
+### 🙏 Bhandara Cyber Squad Ko Support Karo! 🙏
 
-## 🔥 BHANDARA SE NAGPUR TAK FULL POWER 🔥
+<a href="https://github.com/Pranay7030/PRO-PHONE-OSINT-"><img src="https://img.shields.io/github/stars/Pranay7030/PRO-PHONE-OSINT-?style=for-the-badge&color=yellow&label=STAR%20KARO%20BHAI&labelColor=black"></a>
 
-### 👇 NICHE PEELA BUTTON DABA KE STAR DO 👇
-
-<a href="https://github.com/Pranay7030/PRO-PHONE-OSINT-"><img src="https://img.shields.io/github/stars/Pranay7030/PRO-PHONE-OSINT-?style=for-the-badge&color=yellow&label=⭐%20STAR%20KARO%20BHAI%20⭐&labelColor=black"></a>
-
-<br><br>
-
-### 📢 DOSTO KO BHI SHARE KARO
-
-## GitHub: @Pranay7030 | Made with 💀 by Pranay
+## GitHub: @Pranay7030
 
 </div>
 
----
 <p align="center">Made with ❤️ by Pranay | Bhandara Cyber Squad 💀</p>
