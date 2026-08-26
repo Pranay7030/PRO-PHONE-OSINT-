@@ -25,7 +25,7 @@ pkg install python git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
-python PRO-PHONE-OSINT.py
+python3 osint.py
 ~~~
 
 ### 🐧 Linux Installation
@@ -35,7 +35,7 @@ sudo apt install python3 python3-pip git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-.git
 cd PRO-PHONE-OSINT-
 pip3 install -r requirements.txt
-python3 PRO-PHONE-OSINT.py
+python3 osint.py
 ~~~
 <div align="center">
 
