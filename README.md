@@ -32,6 +32,7 @@ git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-
 cd PRO-PHONE-OSINT-
 pip install -r requirements.txt
 python osint.py
+### 📲 INSTALLATION - LINUX
 sudo apt update && sudo apt install python3 git -y
 git clone https://github.com/Pranay7030/PRO-PHONE-OSINT-
 cd PRO-PHONE-OSINT-
