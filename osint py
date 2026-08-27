@@ -9,11 +9,9 @@ C = "\033[96m"
 W = "\033[97m"
 
 print(R + """
-
- BHACKSH OSINT V6.0 EXTREME by PRANAY
- We Audit, We Protect - EST 2026
- Bhandara Cyber Squad
-
+BHACKSH OSINT V6.0 EXTREME by PRANAY
+We Audit, We Protect - EST 2026
+Bhandara Cyber Squad
 """ + W)
 print(G + " [ 4-in-1 EXTREME Tool: Phone | Email | IP | Insta ]" + W)
 
@@ -24,7 +22,6 @@ def phone_osint():
         if not phonenumbers.is_valid_number(p):
             print(R + " Galat Number! Format +9198xxxxxx10" + W)
             return
-
         print(G + f" Valid: {phonenumbers.is_valid_number(p)}" + W)
         print(G + f" Operator: {carrier.name_for_number(p, 'en')}" + W)
         print(G + f" Location/Circle: {geocoder.description_for_number(p, 'en')}" + W)
@@ -48,26 +45,23 @@ def email_osint():
 def ip_osint():
     ip = input(Y + "\nIP daal: " + W)
     try:
-        # Hostname
         try:
             host = socket.gethostbyaddr(ip)[0]
         except:
             host = "Not Found"
-
         print(G + f" IP: {ip}" + W)
         print(G + f" Host: {host}" + W)
-
-        # EXTREME PART - City/ISP nikalega
         try:
             r = requests.get(f"https://ipapi.co/{ip}/json/", timeout=5).json()
+            lat = r.get('latitude')
+            lon = r.get('longitude')
             print(G + f" City: {r.get('city')}, {r.get('region')}, {r.get('country_name')}" + W)
             print(G + f" ISP: {r.get('org')}" + W)
             print(G + f" ASN: {r.get('asn')}" + W)
-            print(C + f"  MAP: https://www.google.com/maps/search/?api=1&query={r.get('latitude')},{r.get('longitude')}" + W)
-            print(C + f"  Report: https://whatismyipaddress.com/ip/{ip}" + W)
+            print(C + f" MAP: https://www.google.com/maps/search/?api=1&query={lat},{lon}" + W)
+            print(C + f" Report: https://whatismyipaddress.com/ip/{ip}" + W)
         except:
             print(Y + " IP API limit - 1 min baad try kar" + W)
-
         print(C + f" Full Report: https://ipinfo.io/{ip}" + W)
     except:
         print(R + " Invalid IP" + W)
