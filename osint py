@@ -63,6 +63,8 @@ def ip_osint():
             print(G + f" City: {r.get('city')}, {r.get('region')}, {r.get('country_name')}" + W)
             print(G + f" ISP: {r.get('org')}" + W)
             print(G + f" ASN: {r.get('asn')}" + W)
+            print(C + f"  MAP: https://www.google.com/maps/search/?api=1&query={r.get('latitude')},{r.get('longitude')}" + W)
+            print(C + f"  Report: https://whatismyipaddress.com/ip/{ip}" + W)
         except:
             print(Y + " IP API limit - 1 min baad try kar" + W)
 
