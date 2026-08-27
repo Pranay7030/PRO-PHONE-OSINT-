@@ -1,6 +1,10 @@
 import phonenumbers
 from phonenumbers import geocoder, carrier, timezone
-import socket, re, webbrowser, requests
+import socket
+import re
+import webbrowser
+import requests
+import qrcode
 
 R = "\033[91m"
 G = "\033[92m"
@@ -9,11 +13,10 @@ C = "\033[96m"
 W = "\033[97m"
 
 print(R + """
-BHACKSH OSINT V6.0 EXTREME by PRANAY
-We Audit, We Protect - EST 2026
-Bhandara Cyber Squad
+  BHACKSH OSINT V7.0 EXTREME
+  Bhandara Cyber Squad - By Pranay
 """ + W)
-print(G + " [ 4-in-1 EXTREME Tool: Phone | Email | IP | Insta ]" + W)
+print(G + " [ 4-in-1 Tool: Phone | Email | IP | Insta ]" + W)
 
 def phone_osint():
     num = input(Y + "\nPhone Number (+91 ke sath): " + W)
@@ -22,11 +25,11 @@ def phone_osint():
         if not phonenumbers.is_valid_number(p):
             print(R + " Galat Number! Format +9198xxxxxx10" + W)
             return
-        print(G + f" Valid: {phonenumbers.is_valid_number(p)}" + W)
+        print(G + f" Valid: True" + W)
         print(G + f" Operator: {carrier.name_for_number(p, 'en')}" + W)
         print(G + f" Location/Circle: {geocoder.description_for_number(p, 'en')}" + W)
         print(G + f" Timezone: {timezone.time_zones_for_number(p)}" + W)
-        print(G + f" Country Code: +{p.country_code}" + W)
+        print(G + f" Country: +{p.country_code}" + W)
         print(C + f" Link: https://truecaller.com/search/in/{num}" + W)
         print(C + f" Scam Check: https://www.ipqualityscore.com/phone-number-validator/{num}" + W)
     except:
@@ -37,7 +40,6 @@ def email_osint():
     if re.match(r"[^@]+@[^@]+\.[^@]+", email):
         print(G + f" Valid: {email}" + W)
         print(G + f" Domain: {email.split('@')[1]}" + W)
-        print(G + f" Gmail Link: https://mail.google.com/mail/u/0/#search/{email}" + W)
         print(C + f" Leak Check: https://haveibeenpwned.com/account/{email}" + W)
     else:
         print(R + " Invalid Email" + W)
@@ -55,13 +57,25 @@ def ip_osint():
             r = requests.get(f"https://ipapi.co/{ip}/json/", timeout=5).json()
             lat = r.get('latitude')
             lon = r.get('longitude')
-            print(G + f" City: {r.get('city')}, {r.get('region')}, {r.get('country_name')}" + W)
-            print(G + f" ISP: {r.get('org')}" + W)
-            print(G + f" ASN: {r.get('asn')}" + W)
-            print(C + f" MAP: https://www.google.com/maps/search/?api=1&query={lat},{lon}" + W)
+            city = r.get('city')
+            region = r.get('region')
+            country = r.get('country_name')
+            org = r.get('org')
+            asn = r.get('asn')
+            map_url = f"https://www.google.com/maps/search/?api=1&query={lat},{lon}"
+            print(G + f" City: {city}, {region}, {country}" + W)
+            print(G + f" ISP: {org}" + W)
+            print(G + f" ASN: {asn}" + W)
+            print(C + f" MAP: {map_url}" + W)
             print(C + f" Report: https://whatismyipaddress.com/ip/{ip}" + W)
+            q = input(Y + " Is Map ka QR banau? y/n: " + W)
+            if q.lower() == 'y':
+                img = qrcode.make(map_url)
+                name = f"{ip}_map.png"
+                img.save(name)
+                print(G + f" [✓] QR Saved: {name}" + W)
         except:
-            print(Y + " IP API limit - 1 min baad try kar" + W)
+            print(Y + " API limit - 1 min baad try kar" + W)
         print(C + f" Full Report: https://ipinfo.io/{ip}" + W)
     except:
         print(R + " Invalid IP" + W)
@@ -72,16 +86,22 @@ def insta_osint():
     print(G + f" Username: {user}" + W)
     print(C + f" Profile: https://instagram.com/{user}" + W)
     print(C + f" Google Dork: https://www.google.com/search?q=site:instagram.com+{user}" + W)
-    q = input(Y + " Browser me kholu? y/n: " + W)
-    if q.lower() == 'y':
+    qq = input(Y + " Browser me kholu? y/n: " + W)
+    if qq.lower() == 'y':
         webbrowser.open(f"https://instagram.com/{user}")
 
 while True:
-    print(Y + "\n[1] Phone [2] Email [3] IP [4] Insta [5] Exit" + W)
+    print(Y + "\n[1] Phone [2] Email [3] IP+MAP+QR [4] Insta [5] Exit" + W)
     c = input("Option: ")
-    if c == '1': phone_osint()
-    elif c == '2': email_osint()
-    elif c == '3': ip_osint()
-    elif c == '4': insta_osint()
-    elif c == '5': break
-    else: print("Sahi option daal!")
+    if c == '1':
+        phone_osint()
+    elif c == '2':
+        email_osint()
+    elif c == '3':
+        ip_osint()
+    elif c == '4':
+        insta_osint()
+    elif c == '5':
+        break
+    else:
+        print("Sahi option daal!")
