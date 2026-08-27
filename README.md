@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+![Banner](banner.png)
 # 👻 BHACKSH OSINT V9 FINAL - By PRANAY
 
 ![Version](https://img.shields.io/badge/Version-V9%20FINAL-red?style=for-the-badge)
