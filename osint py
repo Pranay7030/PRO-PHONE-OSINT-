@@ -1,6 +1,6 @@
 import phonenumbers
 from phonenumbers import geocoder, carrier, timezone
-import socket, re, webbrowser
+import socket, re, webbrowser, requests
 
 R = "\033[91m"
 G = "\033[92m"
@@ -8,52 +8,77 @@ Y = "\033[93m"
 C = "\033[96m"
 W = "\033[97m"
 
-print(R + "======================================")
-print(" PRANAY GHOST OSINT V5.0 ULTRA")
-print(" Bhandara Cyber Squad")
-print("======================================" + W)
-print(G + " [ 4-in-1 Tool: Phone | Email | IP | Insta ]" + W)
+print(R + """
+
+ BHACKSH OSINT V6.0 EXTREME by PRANAY
+ We Audit, We Protect - EST 2026
+ Bhandara Cyber Squad
+
+""" + W)
+print(G + " [ 4-in-1 EXTREME Tool: Phone | Email | IP | Insta ]" + W)
 
 def phone_osint():
-    num = input(Y + "\n Phone Number (+91): " + W)
+    num = input(Y + "\nPhone Number (+91 ke sath): " + W)
     try:
         p = phonenumbers.parse(num)
-        print(G + " Valid: " + str(phonenumbers.is_valid_number(p)) + W)
-        print(G + " Operator: " + carrier.name_for_number(p, 'en') + W)
-        print(G + " Location: " + geocoder.description_for_number(p, 'en') + W)
-        print(G + " Timezone: " + str(timezone.time_zones_for_number(p)) + W)
-        print(C + " Link: truecaller.com/search/in/" + num + W)
+        if not phonenumbers.is_valid_number(p):
+            print(R + " Galat Number! Format +9198xxxxxx10" + W)
+            return
+
+        print(G + f" Valid: {phonenumbers.is_valid_number(p)}" + W)
+        print(G + f" Operator: {carrier.name_for_number(p, 'en')}" + W)
+        print(G + f" Location/Circle: {geocoder.description_for_number(p, 'en')}" + W)
+        print(G + f" Timezone: {timezone.time_zones_for_number(p)}" + W)
+        print(G + f" Country Code: +{p.country_code}" + W)
+        print(C + f" Link: https://truecaller.com/search/in/{num}" + W)
+        print(C + f" Scam Check: https://www.ipqualityscore.com/phone-number-validator/{num}" + W)
     except:
         print(R + " Galat Number!" + W)
 
 def email_osint():
-    email = input(Y + "\n Email daal: " + W)
+    email = input(Y + "\nEmail daal: " + W)
     if re.match(r"[^@]+@[^@]+\.[^@]+", email):
-        print(G + " Valid: " + email + W)
-        print(G + " Domain: " + email.split('@')[1] + W)
-        print(C + " Leak: haveibeenpwned.com" + W)
+        print(G + f" Valid: {email}" + W)
+        print(G + f" Domain: {email.split('@')[1]}" + W)
+        print(G + f" Gmail Link: https://mail.google.com/mail/u/0/#search/{email}" + W)
+        print(C + f" Leak Check: https://haveibeenpwned.com/account/{email}" + W)
     else:
         print(R + " Invalid Email" + W)
 
 def ip_osint():
-    ip = input(Y + "\n IP daal: " + W)
+    ip = input(Y + "\nIP daal: " + W)
     try:
-        host = socket.gethostbyaddr(ip)[0]
-        print(G + " IP: " + ip + W)
-        print(G + " Host: " + host + W)
-        print(C + " ipinfo.io/" + ip + W)
+        # Hostname
+        try:
+            host = socket.gethostbyaddr(ip)[0]
+        except:
+            host = "Not Found"
+
+        print(G + f" IP: {ip}" + W)
+        print(G + f" Host: {host}" + W)
+
+        # EXTREME PART - City/ISP nikalega
+        try:
+            r = requests.get(f"https://ipapi.co/{ip}/json/", timeout=5).json()
+            print(G + f" City: {r.get('city')}, {r.get('region')}, {r.get('country_name')}" + W)
+            print(G + f" ISP: {r.get('org')}" + W)
+            print(G + f" ASN: {r.get('asn')}" + W)
+        except:
+            print(Y + " IP API limit - 1 min baad try kar" + W)
+
+        print(C + f" Full Report: https://ipinfo.io/{ip}" + W)
     except:
         print(R + " Invalid IP" + W)
 
 def insta_osint():
-    user = input(Y + "\n Insta Username: " + W)
+    user = input(Y + "\nInsta Username: " + W)
     user = user.replace("@", "").strip()
-    print(G + " Username: " + user + W)
-    print(C + " Profile: https://instagram.com/" + user + W)
-    print(C + " Google: https://www.google.com/search?q=site:instagram.com+" + user + W)
+    print(G + f" Username: {user}" + W)
+    print(C + f" Profile: https://instagram.com/{user}" + W)
+    print(C + f" Google Dork: https://www.google.com/search?q=site:instagram.com+{user}" + W)
     q = input(Y + " Browser me kholu? y/n: " + W)
     if q.lower() == 'y':
-        webbrowser.open("https://instagram.com/" + user)
+        webbrowser.open(f"https://instagram.com/{user}")
 
 while True:
     print(Y + "\n[1] Phone [2] Email [3] IP [4] Insta [5] Exit" + W)
